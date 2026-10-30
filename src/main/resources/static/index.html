@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot WebSocket Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.1.1/bundles/stomp.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <h2>Spring Boot WebSocket Chat</h2>
+
+    <div class="connection-panel">
+        <input type="text" id="username" placeholder="Enter username" value="Client 1">
+        <button id="connect-btn" onclick="connect()">Connect</button>
+    </div>
+
+    <p id="status" class="status-disconnected">Disconnected</p>
+
+    <div id="messages" class="messages-box"></div>
+
+    <div class="input-panel">
+        <input type="text" id="message" placeholder="Type a message..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
